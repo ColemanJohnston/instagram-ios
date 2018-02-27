@@ -29,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Logout notification received")
                 self.logOut()
             }
+        if PFUser.current() != nil{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //View controller currently being set in the Storyboard as default will be overridden
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "FeedNavigationController")
+        }
         
         return true
     }

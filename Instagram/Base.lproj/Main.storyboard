@@ -12,7 +12,7 @@
         <!--Instagram-->
         <scene sceneID="bvz-4g-69B">
             <objects>
-                <viewController id="BuY-iY-0jw" customClass="FeedViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="BuY-iY-0jw" customClass="FeedViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rYI-1r-soO"/>
                         <viewControllerLayoutGuide type="bottom" id="OwZ-41-Mcm"/>
@@ -21,18 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgy-Dp-qcx">
-                                <rect key="frame" x="346" y="64" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-Rb-BJL">
+                                <rect key="frame" x="346" y="72" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="didLogout:" destination="BuY-iY-0jw" eventType="touchUpInside" id="UiK-XJ-N4T"/>
+                                    <action selector="didLogout:" destination="BuY-iY-0jw" eventType="touchUpInside" id="XcA-rc-9wl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Instagram" id="U4g-QH-BJ4"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8o-Pk-ohr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,9 +98,9 @@
         <!--Navigation Controller-->
         <scene sceneID="bJ0-Kl-XqD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vuz-Uf-6zn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="vuz-Uf-6zn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sCb-SZ-BdA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sCb-SZ-BdA" customClass="FeedNavigationBar" customModule="Instagram" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

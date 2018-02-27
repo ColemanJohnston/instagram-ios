@@ -21,6 +21,7 @@ class FeedViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name("didLogout"), object: nil)
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
