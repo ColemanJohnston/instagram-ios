@@ -9,6 +9,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="iUQ-gb-OXA">
+            <objects>
+                <viewController id="2W8-Lg-Cvb" customClass="DetailViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NCb-5h-SBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="AEl-kH-zgY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iNH-IW-6wq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-vb-E7o" customClass="PFImageView">
+                                <rect key="frame" x="20" y="28" width="374" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3K-4e-sF2">
+                                <rect key="frame" x="20" y="410" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Stamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCC-jM-xpb">
+                                <rect key="frame" x="20" y="439" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTR-Rm-p2M">
+                                <rect key="frame" x="20" y="468" width="374" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="G3K-4e-sF2" id="cO2-dg-10q"/>
+                        <outlet property="captionLabel" destination="MTR-Rm-p2M" id="nu4-af-1Mp"/>
+                        <outlet property="postImageView" destination="fwU-vb-E7o" id="ZGk-4t-yQJ"/>
+                        <outlet property="timestampLabel" destination="dCC-jM-xpb" id="ZKZ-Ih-X8m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29h-BK-pSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="-580.43478260869574"/>
+        </scene>
         <!--Instagram-->
         <scene sceneID="bvz-4g-69B">
             <objects>
@@ -73,6 +124,7 @@
                                             <outlet property="UsernameLabel" destination="KUE-MY-aGO" id="8iu-Ug-if3"/>
                                             <outlet property="captionLabel" destination="D4T-5T-lDS" id="Jj0-SO-iU7"/>
                                             <outlet property="postImageView" destination="sPN-Wg-eUL" id="jSd-B9-iZw"/>
+                                            <segue destination="2W8-Lg-Cvb" kind="show" id="iKw-yU-Npx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
