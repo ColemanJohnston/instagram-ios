@@ -12,6 +12,7 @@ import ParseUI
 
 class PostTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var UsernameLabel: UILabel!
     @IBOutlet weak var postImageView: PFImageView!
     @IBOutlet weak var captionLabel: UILabel!
     
@@ -19,6 +20,8 @@ class PostTableViewCell: UITableViewCell {
         didSet {
             self.captionLabel.text = instagramPost["caption"] as? String
             self.postImageView.file = instagramPost["media"] as? PFFile
+            let author = instagramPost["author"] as? PFUser
+            self.UsernameLabel.text = author?.username
             self.postImageView.loadInBackground()
         }
     }

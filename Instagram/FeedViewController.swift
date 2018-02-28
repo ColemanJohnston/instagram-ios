@@ -13,13 +13,22 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var posts: [Post] = []
     
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl: UIRefreshControl?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(didPullToRefresh(_:)), for: UIControlEvents.valueChanged)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.insertSubview(refreshControl!, at: 0)
         fetchData()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func didPullToRefresh(_ refreshControl: UIRefreshControl) {
+        fetchData()
     }
     
     func fetchData() {
@@ -42,6 +51,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             } else {
                 print(error?.localizedDescription)
             }
+            self.refreshControl?.endRefreshing()
         })
 
     }
