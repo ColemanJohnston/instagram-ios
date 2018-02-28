@@ -56,7 +56,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             if success{
                 print("Image Uploaded")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextviewConroller = storyboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+                let nextviewConroller = storyboard.instantiateViewController(withIdentifier: "FeedNavigationController") as! UINavigationController
                 self.present(nextviewConroller, animated: true, completion: nil)
             }
             else{
