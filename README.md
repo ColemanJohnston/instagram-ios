@@ -61,7 +61,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had challenges with accessing a Mac to work on the project. I also found navigation to be a challenge with this project.
 
 ## License
 
